@@ -22,7 +22,7 @@ const Installation = () => {
                     <div className="badge badge-primary">1</div>
                     <h3 className="font-semibold">Install dependencies</h3>
                   </div>
-                  <CodeBlock code="apt-get update && apt-get install -y zsh python3 python3-pip git curl" />
+                  <CodeBlock code="apt-get update && apt-get install -y zsh python3 python3-pip pipx netcat-openbsd" />
                 </div>
 
                 {/* Step 2 */}
@@ -43,7 +43,8 @@ const Installation = () => {
                   </div>
                   <div className="space-y-2">
                     <CodeBlock code="zsh" />
-                    <CodeBlock code="pip install terminal-tutor" />
+                    <CodeBlock code="pipx install terminal-tutor" />
+                    <CodeBlock code='export PATH="$PATH:$HOME/.local/bin"' />
                   </div>
                 </div>
 
@@ -51,7 +52,7 @@ const Installation = () => {
                 <div>
                   <div className="flex items-center gap-2 mb-2">
                     <div className="badge badge-primary">4</div>
-                    <h3 className="font-semibold">Setup shell integration</h3>
+                    <h3 className="font-semibold">Setup (auto-starts daemon)</h3>
                   </div>
                   <div className="space-y-2">
                     <CodeBlock code="terminal-tutor install" />
@@ -63,21 +64,9 @@ const Installation = () => {
                 <div>
                   <div className="flex items-center gap-2 mb-2">
                     <div className="badge badge-primary">5</div>
-                    <h3 className="font-semibold">Verify installation</h3>
-                  </div>
-                  <CodeBlock code="terminal-tutor diagnose" />
-                  <p className="text-sm text-success mt-2">
-                    ✨ Should show: "All systems operational!"
-                  </p>
-                </div>
-
-                {/* Step 6 */}
-                <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="badge badge-primary">6</div>
                     <h3 className="font-semibold">Try it!</h3>
                   </div>
-                  <CodeBlock code="git st  # Type slowly, watch prediction appear" />
+                  <CodeBlock code="git st  # Type slowly, watch prediction appear instantly" />
                   <p className="text-sm text-success mt-2">
                     🟢 SAFE - Show the working tree status
                   </p>
@@ -105,7 +94,7 @@ const Installation = () => {
                   <div>
                     <h4 className="font-semibold mb-2">macOS</h4>
                     <p className="text-sm opacity-70 mb-2">Zsh is pre-installed on macOS 10.15+</p>
-                    <CodeBlock code="pip3 install terminal-tutor" />
+                    <CodeBlock code="brew install pipx netcat && pipx install terminal-tutor" />
                     <CodeBlock code="terminal-tutor install && exec zsh" />
                   </div>
 
@@ -116,15 +105,15 @@ const Installation = () => {
 
                   <div>
                     <h4 className="font-semibold mb-2">Fedora/RHEL/CentOS</h4>
-                    <CodeBlock code="sudo dnf install zsh python3 python3-pip" />
-                    <CodeBlock code="pip install terminal-tutor" />
+                    <CodeBlock code="sudo dnf install zsh python3 python3-pip pipx netcat" />
+                    <CodeBlock code="pipx install terminal-tutor" />
                     <CodeBlock code="zsh && terminal-tutor install && exec zsh" />
                   </div>
 
                   <div>
                     <h4 className="font-semibold mb-2">Arch Linux</h4>
-                    <CodeBlock code="sudo pacman -S zsh python python-pip" />
-                    <CodeBlock code="pip install terminal-tutor" />
+                    <CodeBlock code="sudo pacman -S zsh python python-pipx openbsd-netcat" />
+                    <CodeBlock code="pipx install terminal-tutor" />
                     <CodeBlock code="zsh && terminal-tutor install && exec zsh" />
                   </div>
                 </div>
