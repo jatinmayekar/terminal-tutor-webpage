@@ -15,12 +15,10 @@ const Hero = () => {
         </div>
 
         <h1 className="font-extrabold text-4xl lg:text-6xl tracking-tight md:-mb-4">
-        Real-time command education for developers
+          <div className="mb-3">Understand commands as you type</div>
+          <div className="mb-3">Get real-time explanations with risk warnings</div>
+          <div>Build terminal expertise for life</div>
         </h1>
-        <p className="text-lg opacity-80 leading-relaxed">
-          Real-time command education. Learn as you type. Get instant predictions,
-          safety warnings, and natural language search. Forever Free.
-        </p>
 
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
           <a

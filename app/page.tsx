@@ -9,8 +9,8 @@ import Footer from "@/components/Footer";
 import { getSEOTags } from "@/libs/seo";
 
 export const metadata = getSEOTags({
-  title: "Terminal Tutor - Real-time command education for developers",
-  description: "Real-time command education for developers. Learn terminal commands as you type with 1.6ms predictions, natural language ask mode, and safety warnings. Forever Free.",
+  title: "Terminal Tutor - Understand commands as you type",
+  description: "Understand commands as you type. Get real-time explanations with risk warnings. Build terminal expertise for life. 1.6ms predictions, 459+ commands. Forever Free.",
   canonicalUrlRelative: "/",
 });
 
