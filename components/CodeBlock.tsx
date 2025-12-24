@@ -22,12 +22,12 @@ const CodeBlock = ({ code, language = "bash" }: CodeBlockProps) => {
 
   return (
     <div className="relative group">
-      <pre className="bg-base-300 p-3 pr-12 rounded text-sm overflow-x-auto whitespace-pre-wrap break-words">
-        {code}
+      <pre className="bg-base-200 border border-base-content/10 px-4 py-3 pr-12 rounded-lg text-sm font-mono overflow-x-auto">
+        <code>{code}</code>
       </pre>
       <button
         onClick={handleCopy}
-        className="absolute top-2 right-2 btn btn-xs btn-outline"
+        className="absolute top-2 right-2 p-1.5 rounded-md opacity-0 group-hover:opacity-100 transition-opacity hover:bg-base-300"
         aria-label="Copy code"
       >
         {copied ? (
@@ -48,7 +48,7 @@ const CodeBlock = ({ code, language = "bash" }: CodeBlockProps) => {
         ) : (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-4 w-4"
+            className="h-4 w-4 text-base-content/50"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

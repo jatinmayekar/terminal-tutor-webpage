@@ -2,141 +2,138 @@ import CodeBlock from "./CodeBlock";
 
 const Installation = () => {
   return (
-    <section className="bg-base-200" id="installation">
-      <div className="py-24 px-8 max-w-7xl mx-auto">
-        <div className="flex flex-col text-center mb-12">
-          <p className="inline-block font-semibold text-primary mb-4">Installation</p>
-          <h2 className="sm:text-4xl text-3xl font-extrabold text-base-content">
-            Ubuntu/Debian - Quick Setup
+    <section className="bg-base-100" id="installation">
+      <div className="py-16 lg:py-24 px-8 max-w-3xl mx-auto">
+        <div className="flex flex-col text-center mb-16">
+          <p className="text-sm font-medium text-primary mb-3 tracking-wide uppercase">Installation</p>
+          <h2 className="text-3xl lg:text-5xl font-bold text-base-content">
+            Get started in minutes
           </h2>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          {/* Single concise installation block */}
-          <div className="card bg-base-100 shadow-xl">
-            <div className="card-body">
-              <div className="space-y-6">
-                {/* Step 1 */}
-                <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="badge badge-primary">1</div>
-                    <h3 className="font-semibold">Install dependencies</h3>
-                  </div>
-                  <CodeBlock code="apt-get update && apt-get install -y zsh python3 python3-pip pipx netcat-openbsd" />
-                </div>
+        <div className="space-y-12">
+          {/* Step 1 */}
+          <div className="flex gap-6">
+            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-base-content text-base-100 flex items-center justify-center text-sm font-medium">
+              1
+            </div>
+            <div className="flex-1 pt-1">
+              <h3 className="font-semibold text-lg mb-3">Install dependencies</h3>
+              <CodeBlock code="sudo apt-get update && apt-get install -y zsh python3 python3-pip pipx netcat-openbsd" />
+            </div>
+          </div>
 
-                {/* Step 2 */}
-                <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="badge badge-secondary">2</div>
-                    <h3 className="font-semibold">Install Oh-My-Zsh (Optional)</h3>
-                  </div>
-                  <CodeBlock code='sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended' />
-                  <p className="text-xs opacity-70 mt-1">Enhanced Zsh experience with themes & plugins</p>
-                </div>
+          {/* Step 2 */}
+          <div className="flex gap-6">
+            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-base-content text-base-100 flex items-center justify-center text-sm font-medium">
+              2
+            </div>
+            <div className="flex-1 pt-1">
+              <h3 className="font-semibold text-lg mb-3">Install Oh-My-Zsh <span className="font-normal text-base-content/60">(Optional)</span></h3>
+              <CodeBlock code='sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended' />
+              <p className="text-sm text-base-content/60 mt-2">Enhanced Zsh experience with themes & plugins</p>
+            </div>
+          </div>
 
-                {/* Step 3 */}
-                <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="badge badge-primary">3</div>
-                    <h3 className="font-semibold">Install Terminal Tutor</h3>
-                  </div>
-                  <div className="space-y-2">
-                    <CodeBlock code="zsh" />
-                    <CodeBlock code="pipx install terminal-tutor" />
-                    <CodeBlock code='export PATH="$PATH:$HOME/.local/bin"' />
-                  </div>
-                </div>
-
-                {/* Step 4 */}
-                <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="badge badge-primary">4</div>
-                    <h3 className="font-semibold">Setup (auto-starts daemon)</h3>
-                  </div>
-                  <div className="space-y-2">
-                    <CodeBlock code="terminal-tutor install" />
-                    <CodeBlock code="exec zsh" />
-                  </div>
-                </div>
-
-                {/* Step 5 */}
-                <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="badge badge-primary">5</div>
-                    <h3 className="font-semibold">Try it!</h3>
-                  </div>
-                  <CodeBlock code="git st  # Type slowly, watch prediction appear instantly" />
-                  <p className="text-sm text-success mt-2">
-                    🟢 SAFE - Show the working tree status
-                  </p>
-                </div>
-              </div>
-
-              <div className="divider"></div>
-
-              <div className="text-center">
-                <p className="text-lg font-semibold text-success">That's it! ✨</p>
-                <p className="text-sm opacity-70 mt-2">Real-time predictions should now appear as you type.</p>
+          {/* Step 3 */}
+          <div className="flex gap-6">
+            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-base-content text-base-100 flex items-center justify-center text-sm font-medium">
+              3
+            </div>
+            <div className="flex-1 pt-1">
+              <h3 className="font-semibold text-lg mb-3">Install Terminal Tutor</h3>
+              <div className="space-y-3">
+                <CodeBlock code="zsh" />
+                <CodeBlock code="pipx install terminal-tutor" />
+                <CodeBlock code='export PATH="$PATH:$HOME/.local/bin"' />
               </div>
             </div>
           </div>
 
-          {/* Alternative installation methods */}
-          <div className="mt-8">
-            <div className="collapse collapse-arrow bg-base-100">
-              <input type="checkbox" />
-              <div className="collapse-title font-medium">
-                Other platforms (macOS, Windows, other Linux)
-              </div>
-              <div className="collapse-content">
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold mb-2">macOS</h4>
-                    <p className="text-sm opacity-70 mb-2">Zsh is pre-installed on macOS 10.15+</p>
-                    <CodeBlock code="brew install pipx netcat && pipx install terminal-tutor" />
-                    <CodeBlock code="terminal-tutor install && exec zsh" />
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold mb-2">Windows (via WSL2)</h4>
-                    <p className="text-sm opacity-70 mb-2">Install Ubuntu on WSL2, then follow Ubuntu steps above</p>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold mb-2">Fedora/RHEL/CentOS</h4>
-                    <CodeBlock code="sudo dnf install zsh python3 python3-pip pipx netcat" />
-                    <CodeBlock code="pipx install terminal-tutor" />
-                    <CodeBlock code="zsh && terminal-tutor install && exec zsh" />
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold mb-2">Arch Linux</h4>
-                    <CodeBlock code="sudo pacman -S zsh python python-pipx openbsd-netcat" />
-                    <CodeBlock code="pipx install terminal-tutor" />
-                    <CodeBlock code="zsh && terminal-tutor install && exec zsh" />
-                  </div>
-                </div>
+          {/* Step 4 */}
+          <div className="flex gap-6">
+            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-base-content text-base-100 flex items-center justify-center text-sm font-medium">
+              4
+            </div>
+            <div className="flex-1 pt-1">
+              <h3 className="font-semibold text-lg mb-3">Setup</h3>
+              <div className="space-y-3">
+                <CodeBlock code="terminal-tutor install" />
+                <CodeBlock code="exec zsh" />
               </div>
             </div>
           </div>
 
-          {/* Troubleshooting */}
-          <div className="mt-8">
-            <div className="alert alert-info">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="stroke-current shrink-0 w-6 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          {/* Step 5 */}
+          <div className="flex gap-6">
+            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-content flex items-center justify-center text-sm font-medium">
+              5
+            </div>
+            <div className="flex-1 pt-1">
+              <h3 className="font-semibold text-lg mb-3">Try it</h3>
+              <CodeBlock code="git st" />
+              <p className="text-sm text-success mt-3 font-medium">
+                You should see: SAFE - Show the working tree status
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Success message */}
+        <div className="mt-16 text-center">
+          <p className="text-base-content/60">
+            Real-time predictions will now appear as you type.
+          </p>
+        </div>
+
+        {/* Other platforms - collapsible */}
+        <div className="mt-12 border-t border-base-content/10 pt-8">
+          <details className="group">
+            <summary className="cursor-pointer list-none flex items-center justify-between py-3 text-base-content/80 hover:text-base-content transition-colors">
+              <span className="font-medium">Other platforms (macOS, Windows, other Linux)</span>
+              <svg className="w-5 h-5 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
+            </summary>
+            <div className="pt-4 space-y-8">
               <div>
-                <h3 className="font-bold">Need help?</h3>
-                <div className="text-xs">
-                  If predictions don't appear, run: <code className="text-xs bg-base-300 px-2 py-1 rounded">terminal-tutor diagnose</code>
-                  <br />This will identify issues and provide fix suggestions.
-                  <br />Check the <a href="#faq" className="link">FAQ section</a> below for more troubleshooting.
+                <h4 className="font-semibold mb-2">macOS</h4>
+                <p className="text-sm text-base-content/60 mb-3">Zsh is pre-installed on macOS 10.15+</p>
+                <div className="space-y-2">
+                  <CodeBlock code="brew install pipx netcat && pipx install terminal-tutor" />
+                  <CodeBlock code="terminal-tutor install && exec zsh" />
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-semibold mb-2">Windows (via WSL2)</h4>
+                <p className="text-sm text-base-content/60">Install Ubuntu on WSL2, then follow Ubuntu steps above</p>
+              </div>
+
+              <div>
+                <h4 className="font-semibold mb-2">Fedora/RHEL/CentOS</h4>
+                <div className="space-y-2">
+                  <CodeBlock code="sudo dnf install zsh python3 python3-pip pipx netcat" />
+                  <CodeBlock code="pipx install terminal-tutor && zsh && terminal-tutor install && exec zsh" />
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-semibold mb-2">Arch Linux</h4>
+                <div className="space-y-2">
+                  <CodeBlock code="sudo pacman -S zsh python python-pipx openbsd-netcat" />
+                  <CodeBlock code="pipx install terminal-tutor && zsh && terminal-tutor install && exec zsh" />
                 </div>
               </div>
             </div>
-          </div>
+          </details>
+        </div>
+
+        {/* Help section - subtle */}
+        <div className="mt-8 p-4 rounded-lg bg-base-200/50 border border-base-content/5">
+          <p className="text-sm text-base-content/70">
+            <span className="font-medium text-base-content">Need help?</span> Run <code className="text-sm bg-base-300 px-1.5 py-0.5 rounded mx-1">terminal-tutor diagnose</code> to identify issues, or check the <a href="#faq" className="text-primary hover:underline">FAQ</a>.
+          </p>
         </div>
       </div>
     </section>

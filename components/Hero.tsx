@@ -3,8 +3,8 @@ import config from "@/config";
 
 const Hero = () => {
   return (
-    <section className="max-w-7xl mx-auto bg-base-100 flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-20 px-8 py-8 lg:py-20">
-      <div className="flex flex-col gap-10 lg:gap-14 items-center justify-center text-center lg:text-left lg:items-start">
+    <section className="max-w-6xl mx-auto bg-base-100 flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16 px-8 py-16 lg:py-24">
+      <div className="flex flex-col gap-8 lg:gap-12 items-center justify-center text-center lg:text-left lg:items-start">
         <div className="flex flex-col gap-2">
           <div className="flex gap-2 text-sm font-medium text-primary items-center">
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -14,11 +14,13 @@ const Hero = () => {
           </div>
         </div>
 
-        <h1 className="font-extrabold text-4xl lg:text-6xl tracking-tight md:-mb-4">
-          <div className="mb-3">Understand commands as you type</div>
-          <div className="mb-3">Get real-time explanations with risk warnings</div>
-          <div>Build terminal expertise for life</div>
+        <h1 className="font-extrabold text-4xl lg:text-6xl tracking-tight">
+          Understand commands as you type
         </h1>
+
+        <p className="text-lg lg:text-xl text-base-content/80 max-w-lg">
+          Real-time explanation with risk warnings. Build terminal expertise for life.
+        </p>
 
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
           <a
@@ -28,10 +30,10 @@ const Hero = () => {
             Install Now
           </a>
           <a
-            href="/dashboard-preview"
+            href="https://github.com/jatinmayekar/terminal-tutor-public"
             className="btn btn-outline btn-wide"
           >
-            View Premium Dashboard
+            GitHub
           </a>
         </div>
 
@@ -47,12 +49,6 @@ const Hero = () => {
               <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
             </svg>
             <span>No signup required</span>
-          </div>
-          <div className="flex gap-1 items-center">
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-            </svg>
-            <span>Proprietary License</span>
           </div>
         </div>
       </div>

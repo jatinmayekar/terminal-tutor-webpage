@@ -24,7 +24,6 @@ export default function Page() {
         <Hero />
         <FeaturesAccordion />
         <Installation />
-        <Pricing />
         <FAQ />
       </main>
       <Footer />

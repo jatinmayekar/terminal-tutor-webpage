@@ -160,8 +160,8 @@ const Media = ({ feature }: { feature: Feature }) => {
   const { type, path, format, alt, aspectRatio } = feature;
   // Use feature-specific aspect ratio, or default to aspect-video (16:9)
   const aspectClass = aspectRatio || "aspect-video";
-  // Full-width layout: max-w-6xl for ultra-wide terminal screenshots
-  const style = `rounded-2xl ${aspectClass} w-full max-w-6xl mx-auto`;
+  // Full-width layout within container
+  const style = `rounded-2xl ${aspectClass} w-full mx-auto`;
   const size = {
     width: 1536,
     height: 864,
@@ -205,11 +205,11 @@ const FeaturesAccordion = () => {
 
   return (
     <section
-      className="py-24 md:py-32 space-y-24 md:space-y-32 max-w-7xl mx-auto bg-base-100 "
+      className="py-16 lg:py-24 max-w-6xl mx-auto bg-base-100"
       id="features"
     >
       <div className="px-8">
-        <h2 className="font-extrabold text-4xl lg:text-6xl tracking-tight mb-12 md:mb-24">
+        <h2 className="font-extrabold text-3xl lg:text-5xl tracking-tight mb-12 lg:mb-16">
           Everything you need to
           <span className="bg-primary text-primary-content px-2 md:px-4 ml-1 md:ml-1.5 leading-relaxed whitespace-nowrap">
             master the terminal

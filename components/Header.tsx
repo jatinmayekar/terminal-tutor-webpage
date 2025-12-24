@@ -14,18 +14,6 @@ const links: {
   label: string;
 }[] = [
   {
-    href: "/dashboard-preview",
-    label: "Dashboard",
-  },
-  {
-    href: "/#pricing",
-    label: "Pricing",
-  },
-  {
-    href: "/#testimonials",
-    label: "Reviews",
-  },
-  {
     href: "/#faq",
     label: "FAQ",
   },
@@ -49,9 +37,9 @@ const Header = () => {
   }, [searchParams]);
 
   return (
-    <header className="bg-base-200">
+    <header className="bg-base-100">
       <nav
-        className="container flex items-center justify-between px-8 py-4 mx-auto"
+        className="max-w-6xl flex items-center justify-between px-8 py-6 mx-auto"
         aria-label="Global"
       >
         {/* Your logo/name on large screens */}
@@ -119,7 +107,7 @@ const Header = () => {
       {/* Mobile menu, show/hide based on menu state. */}
       <div className={`relative z-50 ${isOpen ? "" : "hidden"}`}>
         <div
-          className={`fixed inset-y-0 right-0 z-10 w-full px-8 py-4 overflow-y-auto bg-base-200 sm:max-w-sm sm:ring-1 sm:ring-neutral/10 transform origin-right transition ease-in-out duration-300`}
+          className={`fixed inset-y-0 right-0 z-10 w-full px-8 py-6 overflow-y-auto bg-base-100 sm:max-w-sm sm:ring-1 sm:ring-neutral/10 transform origin-right transition ease-in-out duration-300`}
         >
           {/* Your logo/name on small screens */}
           <div className="flex items-center justify-between">
